@@ -1,4 +1,3 @@
-from turtle import color
 import discord
 import os
 import pymongo

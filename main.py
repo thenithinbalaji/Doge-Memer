@@ -1,18 +1,20 @@
 import os
 import string
-from random import choice, randint
-import requests
-import discord
 from datetime import date, datetime
+from random import choice, randint
+
+import discord
+import requests
+
 from botfunctions import (
     actiongifs,
+    economy,
+    fiftyfifty,
+    helpandinfo,
+    misc,
+    pyrandtoys,
     reddit,
     textreplies,
-    fiftyfifty,
-    economy,
-    helpandinfo,
-    pyrandtoys,
-    misc,
 )
 from botfunctions.utility import find_keys, suggestcmd
 
@@ -130,11 +132,13 @@ async def on_message(message):
         and message.author != client.user
     ):
         await message.reply(
-            choice[
-                "Stop sliding into my DMs you pervert!",
-                "Doge Memer answers only in servers \n**Add Doge Memer To Your Server** https://discordbotlist.com/bots/doge-memer",
-                "Give me sometime",
-            ],
+            choice(
+                [
+                    "Stop sliding into my DMs you pervert!",
+                    "Doge Memer answers only in servers \n**Add Doge Memer To Your Server** https://discordbotlist.com/bots/doge-memer",
+                    "Give me sometime",
+                ]
+            ),
             mention_author=False,
         )
         return
