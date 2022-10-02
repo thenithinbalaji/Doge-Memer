@@ -17,6 +17,7 @@ from botfunctions import (
     textreplies,
 )
 from botfunctions.utility import find_keys, suggestcmd
+from server import runserver
 
 # loading env variables
 try:
@@ -383,6 +384,7 @@ try:
                                 mention_author=True,
                             )
 
+    runserver()
     client.run(os.getenv("discord_bot_token"))
 
 except:
