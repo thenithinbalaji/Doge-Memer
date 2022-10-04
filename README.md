@@ -32,23 +32,23 @@ Making your server unique and extraordinary has never been easier!
   </a>
 </p>
 
-# How to add Doge Memer?
+## 🐶 How to add Doge Memer?
 
 If you want to use Doge Memer on your server without messing around with hosting stuff, you can add our public instance by [clicking here!](https://discord.com/api/oauth2/authorize?client_id=835785944627675168&permissions=964423572675&scope=bot%20applications.commands) We recommend using the public instance, after all, more than 3K guilds already use, trust and love it, so why not try it out?
 
 
-# Support Doge Memer
+## 💌 Support Doge Memer
 
 Do you want to show some love? Do you enjoy Doge Memer? <br>
 If you want to talk about it over some coffee, feel free to [buy me a coffee](https://www.buymeacoffee.com/thenithinbalaji)
 
-# Important Links
+## 🔗 Important Links
 
 Join us on our [Official Discord Server](https://discord.gg/Xqgzyngnda) <br>
 View the Bot on [Discord Bot List](https://discordbotlist.com/bots/doge-memer) <br>
 [Replit Ping Website](https://doge-memer.thenithinbalaji.repl.co/)
 
-# License
+## 📖 License
 
 Released under the [BSD 4-Clause License](LICENSE) <br>
 Artwork created by [Anatoly Muschenko](https://tolyanmy.artstation.com/) on ArtStation <br>
