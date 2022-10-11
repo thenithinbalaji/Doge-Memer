@@ -1,12 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Doge Memer</title>
+    <link rel="icon" href="{{ url_for('static',filename='assets/doge_logo.png') }}" />
+
+    <!-- Google Fonts & CSS -->
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet" />
+
+    <!-- Google Fonts & CSS -->
+
+    <!-- Meta Tags-->
+
+    <meta name="og:title" property="og:title" content="Doge Memer Discord Bot" />
+    <meta name="twitter:title" content="Doge Memer Discord Bot" />
+
+    <meta name="description"
+        content="Doge Memer is a feature-rich Discord bot with the original twist of being sarcastic and memey. A MASSIVE currency system, tons of memes, and much more!" />
+
+    <meta property="og:description"
+        content="Doge Memer is a feature-rich Discord bot with the original twist of being sarcastic and memey. A MASSIVE currency system, tons of memes, and much more!" />
+
+    <meta name="twitter:description"
+        content="Doge Memer is a feature-rich Discord bot with the original twist of being sarcastic and memey. A MASSIVE currency system, tons of memes, and much more!" />
+
+    <meta property="og:image:width" content="64" />
+    <meta property="og:image:height" content="64" />
+    <meta property="og:image" content="{{ url_for('static',filename='assets/doge_logo.png') }}" />
+    <meta name="twitter:image" content="{{ url_for('static',filename='assets/doge_logo.png') }}" />
+    <meta property="og:type" content="website" />
+
+    <!-- Meta Tags-->
 </head>
-<body>
-    <h1>Soooo gooood!</h1>
+
+<body class="bg-[#272934]">
+    <nav class="flex justify-between mt-6 p-3">
+        <p
+            class="font-[Montserrat] text-white uppercase text-2xl sm:text-3xl md:ml-24 sm:ml-16 flex flex-col justify-center">
+            Doge Memer
+        </p>
+
+        <a href="https://discord.com/api/oauth2/authorize?client_id=835785944627675168&permissions=964423572675&scope=bot%20applications.commands"
+            target="_blank"
+            class="bg-[#3994ff] text-white pl-4 pr-4 pt-2 pb-2 rounded-md md:mr-20 shadow-2xl shadow-blue-400 hover:bg-[#2a6ebd] flex flex-col justify-center">
+            Invite
+        </a>
+    </nav>
+
+    <div class="sm:flex sm:flex-row sm:justify-evenly mt-28 mb-10 ml-5">
+        <div class="flex flex-col justify-center p-3 md:text-left text-center">
+            <p class="text-white font-[Montserrat] sm:text-6xl text-3xl">
+                Build the best <br />Discord Server!
+            </p>
+            <p class="text-white sm:text-xl text-md">
+                Memes • Jokes • Economy • Roasts • Actions • Mini-Games
+            </p>
+
+            <div class="flex justify-evenly p-3">
+                <a href="https://discord.com/api/oauth2/authorize?client_id=835785944627675168&permissions=964423572675&scope=bot%20applications.commands"
+                    target="_blank"
+                    class="bg-[#3994ff] hover:bg-[#2a6ebd] text-white sm:p-4 p-2 sm:rounded-2xl rounded-lg shadow-2xl shadow-[#000000]">
+                    Add to Discord
+                </a>
+
+                <a href="https://discordbotlist.com/bots/doge-memer" target="_blank"
+                    class="bg-[#52545D] hover:bg-[#353639] text-white sm:p-4 p-2 sm:rounded-2xl rounded-lg shadow-2xl shadow-[#000000] ml-3">
+                    View on BotList
+                </a>
+            </div>
+        </div>
+
+        <div class="relative md:flex md:flex-col md:justify-center hidden w-1/3">
+            <img src="{{ url_for('static',filename='assets/doge_framed.png') }}" />
+        </div>
+    </div>
+
+    <div class="bg-[#1F2129] md:flex md:justify-evenly p-10 gap-3">
+        <div class="md:flex md:flex-col justify-center text-center">
+            <p class="text-white text-xl md:text-2xl font-[Montserrat]">
+                Used by 5K Plus Discord Servers
+            </p>
+        </div>
+
+        <div
+            class="lg:flex lg:justify-between md:grid md:grid-cols-3 sm:flex mt-5 sm:justify-center gap-10 grid grid-cols-3 place-content-center text-center">
+            <img src="{{ url_for('static',filename='assets/server_icon5.png') }}" class="h-16 w-16 rounded-xl" />
+            <img src="{{ url_for('static',filename='assets/server_icon4.png') }}" class="h-16 w-16 rounded-xl" />
+            <img src="{{ url_for('static',filename='assets/server_icon6.png') }}" class="h-16 w-16 rounded-xl" />
+            <img src="{{ url_for('static',filename='assets/server_icon2.png') }}" class="h-16 w-16 rounded-xl" />
+            <img src="{{ url_for('static',filename='assets/server_icon3.png') }}" class="h-16 w-16 rounded-xl" />
+            <img src="{{ url_for('static',filename='assets/server_icon1.png') }}" class="h-16 w-16 rounded-xl" />
+        </div>
+    </div>
+
+    <div class="sm:flex p-10">
+        <div class="sm:w-1/2 sm:flex sm:flex-col justify-center text-center">
+            <p class="text-white font-[Montserrat] lg:text-4xl md:text-3xl text-2xl sm:m-0 mt-10 mb-10">
+                Get Reddit Content directly delivered to your Discord
+            </p>
+        </div>
+
+        <div class="sm:w-1/2">
+            <img src="{{ url_for('static',filename='assets/discord_asset2.svg') }}" class="w-full" />
+        </div>
+    </div>
+
+    <div class="sm:flex p-10 bg-[#1F2129]">
+        <div class="sm:w-1/2">
+            <img src="{{ url_for('static',filename='assets/discord_asset1.svg') }}" class="w-full" />
+        </div>
+
+        <div class="sm:w-1/2 sm:flex sm:flex-col justify-center text-center">
+            <p class="text-white font-[Montserrat] lg:text-4xl md:text-3xl text-2xl sm:m-0 mt-10 mb-10">
+                Engage with your server members to race to the server leaderboard
+            </p>
+        </div>
+    </div>
+
+    <div class="sm:flex p-10">
+        <div class="sm:w-1/2 sm:flex sm:flex-col justify-center text-center">
+            <p class="text-white font-[Montserrat] lg:text-4xl md:text-3xl text-2xl sm:m-0 mt-10 mb-10">
+                Chill and Hangout with 25+ fun-filled command keywords
+            </p>
+        </div>
+
+        <div class="sm:w-1/2">
+            <img src="{{ url_for('static',filename='assets/discord_asset3.svg') }}" class="w-full" />
+        </div>
+    </div>
+
+    <div class="bg-[#1F2129] p-10 flex gap-10 justify-center">
+        <div class="text-left">
+            <p class="text-white font-bold sm:text-xl text-lg">Doge Memer ©2022</p>
+            <p class="text-[#9d9d9d] sm:text-xl text-lg">
+                Created by The Nithin Balaji
+            </p>
+
+            <div class="flex justify-start mt-2">
+                <a href="https://github.com/thenithinbalaji/Doge-Memer" target="_blank"><img
+                        src="{{ url_for('static',filename='assets/github_logo.png') }}"
+                        class="h-8 sm:h-14 rounded-full m-1 hover:outline-white hover:outline" /></a>
+                <a href="https://discord.gg/Xqgzyngnda" target="_blank"><img src="{{ url_for('static',filename='assets/discord_logo.png') }}"
+                        class="h-8 sm:h-14 rounded-full m-1 hover:outline-white hover:outline" /></a>
+            </div>
+        </div>
+
+        <div class="hidden md:block">
+            <p class="text-white font-bold text-2xl">Frequently Used</p>
+            <ul class="text-[#9d9d9d]">
+                <li>Show Me A Meme</li>
+                <li>Check Balance</li>
+                <li>Moment @User</li>
+                <li>Fifty Fifty</li>
+            </ul>
+        </div>
+
+        <div class="hidden sm:block">
+            <p class="text-white font-bold text-2xl">Bot Information</p>
+            <ul class="text-[#9d9d9d]">
+                <li>
+                    <a href="https://pypi.org/project/discord.py/" class="hover:text-white"
+                        target="_blank">Discord.py</a>
+                </li>
+                <li>
+                    <a href="https://www.mongodb.com/" class="hover:text-white" target="_blank">MongoDB</a>
+                </li>
+                <li>
+                    <a href="https://replit.com/" class="hover:text-white" target="_blank">Replit Hosting</a>
+                </li>
+                <li>
+                    <a href="https://github.com/thenithinbalaji/Doge-Memer" class="hover:text-white"
+                        target="_blank">Open-Source</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div>
+            <p class="text-white font-bold text-2xl">Important Links</p>
+            <ul class="text-[#9d9d9d]">
+                <li>
+                    <a href="https://www.buymeacoffee.com/thenithinbalaji" class="hover:text-white"
+                        target="_blank">Donate</a>
+                </li>
+                <li>
+                    <a href="https://discord.gg/Xqgzyngnda" class="hover:text-white" target="_blank">Support Server</a>
+                </li>
+                <li>
+                    <a href="https://github.com/thenithinbalaji/Doge-Memer" class="hover:text-white"
+                        target="_blank">Contribute</a>
+                </li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+    </div>
 </body>
+
 </html>
