@@ -2,7 +2,7 @@ import os
 import string
 from datetime import date, datetime
 from random import choice, randint
-
+import pymongo
 import discord
 import requests
 
@@ -29,7 +29,7 @@ except Exception as err:
 
 try:
 	# sharding
-	client = discord.AutoShardedClient()
+	client = discord.AutoShardedClient(intents=discord.Intents.default())
 
 	# setting bot status
 	@client.event
@@ -43,7 +43,7 @@ try:
 	async def on_guild_join(guild):
 		try:
 			gc = int(len(client.guilds))
-			uc = gc * 100 + randint(1234, 2345)
+			uc = pymongo.MongoClient(os.environ.get("mongodb_connection_string"))["maindb"]["userdata"].count_documents({}) * 100 - randint(250, 500)
 			authtoken = os.getenv("dbl_token")
 
 			requests.post(
@@ -201,7 +201,6 @@ try:
 			  "funny",
 			  "irl",
 			  "meme",
-			  "nigga",
 			  "twitter",
 			  "wholesome",
 			 ],
@@ -291,16 +290,16 @@ try:
 			 "fifty": ("fiftyfifty", None),
 			 "balance": (fromid, message_author_name, message_author_disc),
 			 "bal": (fromid, message_author_name, message_author_disc),
-			 "info": (len(client.guilds), client.user.avatar_url),
+			 "info": (len(client.guilds), client.user.avatar.url),
 			 "coin": ("coin", None),
 			 "dice": ("dice", None),
 			 "cards": ("card", None),
 			 "beg": (fromid, message_author_name, message_author_disc),
 			 "bored": (message_author_name, None),
-			 "server": (message_author_name, message.author.avatar_url),
+			 "server": (message_author_name, message.author.avatar.url),
 			 "vote": (None, None),
-			 "coffee": (message_author_name, message.author.avatar_url),
-			 "support": (message_author_name, message.author.avatar_url),
+			 "coffee": (message_author_name, message.author.avatar.url),
+			 "support": (message_author_name, message.author.avatar.url),
 			 "help": (command_types, None),
 			}
 
@@ -364,7 +363,11 @@ try:
 							)
 
 	runserver()
-	client.run(os.getenv("discord_bot_token"))
+	try:
+		client.run(os.getenv("discord_bot_token"))
+	except Exception as err:
+		if err.status_code == 429:
+			os.system("kill 1")
 
 except Exception as err:
 	print(err)

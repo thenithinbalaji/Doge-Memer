@@ -14,7 +14,7 @@ except Exception as err:
 # (message reply string, message reply embed, reply to message bool, mention author bool, dm bool)
 def result(subbreddit: str, *args):
     response = requests.get(
-        str(os.getenv("reddit_api")) + subbreddit
+        str(os.getenv("reddit_api")) + "/" + subbreddit
     )  # subbreddit here is always fiftyfifty
     imagedata = json.loads(response.text)
 

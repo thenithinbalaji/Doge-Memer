@@ -17,7 +17,7 @@ def result(subbreddit: str = None, *args):
         response = requests.get(str(os.getenv("reddit_api")))
         imagedata = json.loads(response.text)
     else:
-        response = requests.get(str(os.getenv("reddit_api")) + subbreddit)
+        response = requests.get(str(os.getenv("reddit_api")) + "/" + subbreddit)
         imagedata = json.loads(response.text)
 
     try:
