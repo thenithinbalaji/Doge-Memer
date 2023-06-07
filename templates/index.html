@@ -11,10 +11,11 @@
 
     <!-- Google Fonts & CSS -->
 
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
     <!-- Google Fonts & CSS -->
 
@@ -41,7 +42,7 @@
     <!-- Meta Tags-->
 </head>
 
-<body class="bg-[#272934]">
+<body class="bg-[#272934] overflow-x-hidden">
     <nav class="flex justify-between mt-6 p-3">
         <p
             class="font-[Montserrat] text-white uppercase text-2xl sm:text-3xl md:ml-24 sm:ml-16 flex flex-col justify-center">
@@ -50,13 +51,13 @@
 
         <a href="https://discord.com/api/oauth2/authorize?client_id=835785944627675168&permissions=964423572675&scope=bot%20applications.commands"
             target="_blank"
-            class="bg-[#3994ff] text-white pl-4 pr-4 pt-2 pb-2 rounded-md md:mr-20 shadow-2xl shadow-blue-400 hover:bg-[#2a6ebd] flex flex-col justify-center">
+            class="bg-[#3994ff] text-white pl-4 pr-4 pt-2 pb-2 rounded-md md:mr-20 shadow-2xl shadow-[#000000] hover:bg-[#2a6ebd] flex flex-col justify-center hover:scale-105">
             Invite
         </a>
     </nav>
 
-    <div class="sm:flex sm:flex-row sm:justify-evenly mt-28 mb-10">
-        <div class="flex flex-col justify-center p-3 md:text-left text-center">
+    <div class="sm:flex sm:flex-row sm:justify-evenly mt-28 mb-10 px-10 ">
+        <div class="flex flex-col justify-center p-3 md:text-left text-center hover:scale-110 duration-500">
             <p class="text-white font-[Montserrat] sm:text-6xl text-3xl">
                 Build the best <br />Discord Server!
             </p>
@@ -64,44 +65,54 @@
                 Memes • Jokes • Economy • Roasts • Actions • Mini-Games
             </p>
 
-            <div class="flex justify-evenly p-3">
+            <div class="flex justify-evenly p-3 mt-5">
                 <a href="https://discord.com/api/oauth2/authorize?client_id=835785944627675168&permissions=964423572675&scope=bot%20applications.commands"
                     target="_blank"
-                    class="bg-[#3994ff] hover:bg-[#2a6ebd] text-white sm:p-4 p-2 sm:rounded-2xl rounded-lg shadow-2xl shadow-[#000000]">
+                    class="bg-[#3994ff] hover:bg-[#2a6ebd] text-white sm:p-4 p-2 sm:rounded-2xl rounded-lg shadow-2xl shadow-[#000000] font-medium hover:scale-105">
                     Add to Discord
                 </a>
 
                 <a href="https://discordbotlist.com/bots/doge-memer" target="_blank"
-                    class="bg-[#52545D] hover:bg-[#353639] text-white sm:p-4 p-2 sm:rounded-2xl rounded-lg shadow-2xl shadow-[#000000] ml-3">
-                    View on BotList
+                    class="bg-[#52545D] hover:bg-[#353639] text-white sm:p-4 p-2 sm:rounded-2xl rounded-lg shadow-2xl shadow-[#000000] ml-3 font-medium hover:scale-105">
+                    Discord Bot List
                 </a>
             </div>
         </div>
 
-        <div class="relative md:flex md:flex-col md:justify-center hidden w-1/3">
+        <div class="relative lg:flex lg:flex-col lg:justify-center hidden w-1/3 hover:scale-105 duration-500">
             <img src="{{ url_for('static',filename='assets/doge_framed.png') }}" />
         </div>
     </div>
 
-    <div class="bg-[#1F2129] md:flex md:justify-evenly p-10 gap-3">
-        <div class="md:flex md:flex-col justify-center text-center">
-            <p class="text-white text-xl md:text-2xl font-[Montserrat]">
-                Used by 5K Plus Discord Servers
-            </p>
+    <div class="bg-[#1F2129] md:flex md:justify-evenly p-10 gap-3 hover:scale-105 duration-500">
+        <div class="flex justify-center">
+            <div class="md:flex md:flex-col justify-center text-center sm:w-1/2 lg:w-full">
+                <p class="text-white text-xl md:text-2xl font-[Montserrat]">
+                    Used by 5K Plus Discord Servers
+                </p>
+            </div>
         </div>
 
-        <div
-            class="lg:flex lg:justify-between md:grid md:grid-cols-3 sm:flex mt-5 sm:justify-center gap-10 grid grid-cols-3 place-content-center text-center">
-            <img src="{{ url_for('static',filename='assets/server_icon5.png') }}" class="h-16 w-16 rounded-xl" />
-            <img src="{{ url_for('static',filename='assets/server_icon4.png') }}" class="h-16 w-16 rounded-xl" />
-            <img src="{{ url_for('static',filename='assets/server_icon6.png') }}" class="h-16 w-16 rounded-xl" />
-            <img src="{{ url_for('static',filename='assets/server_icon2.png') }}" class="h-16 w-16 rounded-xl" />
-            <img src="{{ url_for('static',filename='assets/server_icon3.png') }}" class="h-16 w-16 rounded-xl" />
-            <img src="{{ url_for('static',filename='assets/server_icon1.png') }}" class="h-16 w-16 rounded-xl" />
+        <div class="flex justify-center">
+            <div
+                class="lg:flex lg:justify-between md:grid md:grid-cols-3 sm:flex mt-5 sm:justify-center gap-10 grid grid-cols-3 w-fit">
+                <img src="{{ url_for('static',filename='assets/server_icon5.png') }}"
+                    class="hover:scale-110 h-14 w-14 sm:h-16 sm:w-16 rounded-xl" />
+                <img src="{{ url_for('static',filename='assets/server_icon4.png') }}"
+                    class="hover:scale-110 h-14 w-14 sm:h-16 sm:w-16 rounded-xl" />
+                <img src="{{ url_for('static',filename='assets/server_icon6.png') }}"
+                    class="hover:scale-110 h-14 w-14 sm:h-16 sm:w-16 rounded-xl" />
+                <img src="{{ url_for('static',filename='assets/server_icon2.png') }}"
+                    class="hover:scale-110 h-14 w-14 sm:h-16 sm:w-16 rounded-xl" />
+                <img src="{{ url_for('static',filename='assets/server_icon3.png') }}"
+                    class="hover:scale-110 h-14 w-14 sm:h-16 sm:w-16 rounded-xl" />
+                <img src="{{ url_for('static',filename='assets/server_icon1.png') }}"
+                    class="hover:scale-110 h-14 w-14 sm:h-16 sm:w-16 rounded-xl" />
+            </div>
         </div>
     </div>
 
-    <div class="sm:flex p-10">
+    <div class="sm:flex p-10 hover:scale-105 duration-500">
         <div class="sm:w-1/2 sm:flex sm:flex-col justify-center text-center">
             <p class="text-white font-[Montserrat] lg:text-4xl md:text-3xl text-2xl sm:m-0 mt-10 mb-10">
                 Get Reddit Content directly delivered to your Discord
@@ -113,7 +124,7 @@
         </div>
     </div>
 
-    <div class="sm:flex p-10 bg-[#1F2129]">
+    <div class="sm:flex p-10 bg-[#1F2129] hover:scale-105 duration-500">
         <div class="sm:w-1/2">
             <img src="{{ url_for('static',filename='assets/discord_asset1.svg') }}" class="w-full" />
         </div>
@@ -125,7 +136,7 @@
         </div>
     </div>
 
-    <div class="sm:flex p-10">
+    <div class="sm:flex p-10 hover:scale-105 duration-500">
         <div class="sm:w-1/2 sm:flex sm:flex-col justify-center text-center">
             <p class="text-white font-[Montserrat] lg:text-4xl md:text-3xl text-2xl sm:m-0 mt-10 mb-10">
                 Chill and Hangout with 25+ fun-filled command keywords
@@ -138,22 +149,23 @@
     </div>
 
     <div class="bg-[#1F2129] p-10 flex gap-10 justify-center">
-        <div class="text-left">
+        <div class="text-center sm:text-left hover:scale-110 duration-500">
             <p class="text-white font-bold sm:text-xl text-lg">Doge Memer ©2022</p>
             <p class="text-[#9d9d9d] sm:text-xl text-lg">
-                Created by The Nithin Balaji
+                Created with ❤️ by thenithinbalaji
             </p>
 
-            <div class="flex justify-start mt-2">
+            <div class="flex justify-center sm:justify-start mt-2">
                 <a href="https://github.com/thenithinbalaji/Doge-Memer" target="_blank"><img
                         src="{{ url_for('static',filename='assets/github_logo.png') }}"
-                        class="h-8 sm:h-14 rounded-full m-1 hover:outline-white hover:outline" /></a>
-                <a href="https://discord.gg/Xqgzyngnda" target="_blank"><img src="{{ url_for('static',filename='assets/discord_logo.png') }}"
-                        class="h-8 sm:h-14 rounded-full m-1 hover:outline-white hover:outline" /></a>
+                        class="h-8 sm:h-14 rounded-full m-1 hover:outline-white hover:outline hover:scale-110" /></a>
+                <a href="https://discord.gg/Xqgzyngnda" target="_blank"><img
+                        src="{{ url_for('static',filename='assets/discord_logo.png') }}"
+                        class="h-8 sm:h-14 rounded-full m-1 hover:outline-white hover:outline hover:scale-110" /></a>
             </div>
         </div>
 
-        <div class="hidden md:block">
+        <div class="hidden md:block hover:scale-110 duration-500">
             <p class="text-white font-bold text-2xl">Frequently Used</p>
             <ul class="text-[#9d9d9d]">
                 <li>Show Me A Meme</li>
@@ -163,7 +175,7 @@
             </ul>
         </div>
 
-        <div class="hidden sm:block">
+        <div class="hidden sm:block hover:scale-110 duration-500">
             <p class="text-white font-bold text-2xl">Bot Information</p>
             <ul class="text-[#9d9d9d]">
                 <li>
@@ -182,8 +194,8 @@
                 </li>
             </ul>
         </div>
-        
-        <div>
+
+        <div class="hidden sm:block hover:scale-110 duration-500">
             <p class="text-white font-bold text-2xl">Important Links</p>
             <ul class="text-[#9d9d9d]">
                 <li>
@@ -191,7 +203,8 @@
                         target="_blank">Donate</a>
                 </li>
                 <li>
-                    <a href="https://discord.gg/Xqgzyngnda" class="hover:text-white" target="_blank">Support Server</a>
+                    <a href="https://discord.gg/Xqgzyngnda" class="hover:text-white" target="_blank">Support
+                        Server</a>
                 </li>
                 <li>
                     <a href="https://github.com/thenithinbalaji/Doge-Memer" class="hover:text-white"
